@@ -80,7 +80,8 @@ class AuthController extends Controller
 
         $user->save();
 
-        Mail::to($user->email)->send(new VerifyMail($user));
+        // todo:
+        //Mail::to($user->email)->send(new VerifyMail($user));
 
         return response()->json(['success' => true]);
     }
